@@ -1,0 +1,34 @@
+Datasets:
+  train:
+    root: ../assets/datasets/
+    type: Structural
+    split: 0.8
+  eval:
+    root: ../assets/datasets/
+    type: Structural
+  imagenet:
+    root: ../assets/datasets/ImageNet/
+    type: imagenet
+    teacher_input: 512
+    grayscale_ratio: 0.3
+
+
+Model:
+  ckpt_dir: ../assets/weights/ckptSmall
+  model_size: S
+  batch_size: 4
+  channel_size: 384
+  input_size: 256
+  iterations: 25000
+  with_bn: false
+  device: 0
+  quantile_tresh: 0.999
+
+
+print_freq: 100
+category: zhongyu
+normalized_ratio: 0.1
+combined_mst_ratio: 0.5
+combined_mae_ratio: 0.5
+checkpoints_type: aupr
+seed: 100
